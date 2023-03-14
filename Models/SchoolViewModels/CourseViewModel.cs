@@ -1,4 +1,4 @@
-﻿namespace SignalRRazorCrud00.Models.SchoolViewModels
+﻿namespace SignalRAssignment.Models.SchoolViewModels
 {
     public class CourseViewModel
     {

@@ -2,16 +2,16 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.SignalR;
-using SignalRRazorCrud00.Models;
-using SignalRRazorCrud00.Hubs;
+using SignalRAssignment.Models;
+using SignalRAssignment.Hubs;
 
-namespace SignalRRazorCrud00.Pages.Posts
+namespace SignalRAssignment.Pages.Posts
 {
     public class CreateModel : PageModel
     {
-        private readonly SignalRRazorCrud00.Models.SchoolContextDBContext _context;
+        private readonly SignalRAssignment.Models.SchoolContextDBContext _context;
         private readonly IHubContext<SignalRServer> _signalRHub;
-        public CreateModel(SignalRRazorCrud00.Models.SchoolContextDBContext context, IHubContext<SignalRServer> signalRHub)
+        public CreateModel(SignalRAssignment.Models.SchoolContextDBContext context, IHubContext<SignalRServer> signalRHub)
         {
             _context = context;
             _signalRHub = signalRHub;

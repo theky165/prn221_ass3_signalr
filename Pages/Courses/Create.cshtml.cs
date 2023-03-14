@@ -6,16 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.SignalR;
-using SignalRRazorCrud00.Hubs;
-using SignalRRazorCrud00.Models;
+using SignalRAssignment.Hubs;
+using SignalRAssignment.Models;
 
-namespace SignalRRazorCrud00.Pages.Courses
+namespace SignalRAssignment.Pages.Courses
 {
     public class CreateModel : PageModel
     {
-        private readonly SignalRRazorCrud00.Models.SchoolContextDBContext _context;
+        private readonly SignalRAssignment.Models.SchoolContextDBContext _context;
         private readonly IHubContext<SignalRServer> _signalRHub;
-        public CreateModel(SignalRRazorCrud00.Models.SchoolContextDBContext context, IHubContext<SignalRServer> signalRHub)
+        public CreateModel(SignalRAssignment.Models.SchoolContextDBContext context, IHubContext<SignalRServer> signalRHub)
         {
             _context = context;
             _signalRHub= signalRHub;

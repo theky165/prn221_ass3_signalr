@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using SignalRRazorCrud00.Models;
-using SignalRRazorCrud00.Models.SchoolViewModels;
+using SignalRAssignment.Models;
+using SignalRAssignment.Models.SchoolViewModels;
 
-namespace SignalRRazorCrud00.Pages.Courses
+namespace SignalRAssignment.Pages.Courses
 {
     public class IndexModel : PageModel
     {
-        private readonly SignalRRazorCrud00.Models.SchoolContextDBContext _context;
+        private readonly SignalRAssignment.Models.SchoolContextDBContext _context;
 
-        public IndexModel(SignalRRazorCrud00.Models.SchoolContextDBContext context)
+        public IndexModel(SignalRAssignment.Models.SchoolContextDBContext context)
         {
             _context = context;
         }

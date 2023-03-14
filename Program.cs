@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using SignalRRazorCrud00.Hubs;
-using SignalRRazorCrud00.Models;
+using SignalRAssignment.Hubs;
+using SignalRAssignment.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

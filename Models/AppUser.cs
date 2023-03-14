@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SignalRRazorCrud00.Models
+namespace SignalRAssignment.Models
 {
     public partial class AppUser
     {

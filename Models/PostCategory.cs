@@ -1,4 +1,4 @@
-﻿namespace SignalRRazorCrud00.Models
+﻿namespace SignalRAssignment.Models
 {
     public partial class PostCategory
     {

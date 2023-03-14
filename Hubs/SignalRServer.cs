@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 
-namespace SignalRRazorCrud00.Hubs
+namespace SignalRAssignment.Hubs
 {
     public class SignalRServer : Hub { 
 

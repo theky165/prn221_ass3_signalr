@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using SignalRRazorCrud00.Models;
+using SignalRAssignment.Models;
 
-namespace SignalRRazorCrud00.Pages.Members
+namespace SignalRAssignment.Pages.Members
 {
     public class DetailsModel : PageModel
     {
-        private readonly SignalRRazorCrud00.Models.SchoolContextDBContext _context;
+        private readonly SignalRAssignment.Models.SchoolContextDBContext _context;
 
-        public DetailsModel(SignalRRazorCrud00.Models.SchoolContextDBContext context)
+        public DetailsModel(SignalRAssignment.Models.SchoolContextDBContext context)
         {
             _context = context;
         }

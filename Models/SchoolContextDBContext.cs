@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace SignalRRazorCrud00.Models
+namespace SignalRAssignment.Models
 {
     public partial class SchoolContextDBContext : DbContext
     {

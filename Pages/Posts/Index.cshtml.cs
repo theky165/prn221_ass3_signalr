@@ -1,17 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using SignalRRazorCrud00.Models;
+using SignalRAssignment.Models;
 
-namespace SignalRRazorCrud00.Pages.Posts
+namespace SignalRAssignment.Pages.Posts
 {
     public class IndexModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
         public string search { get; set; }
-        private readonly SignalRRazorCrud00.Models.SchoolContextDBContext _context;
+        private readonly SignalRAssignment.Models.SchoolContextDBContext _context;
 
-        public IndexModel(SignalRRazorCrud00.Models.SchoolContextDBContext context)
+        public IndexModel(SignalRAssignment.Models.SchoolContextDBContext context)
         {
             _context = context;
         }

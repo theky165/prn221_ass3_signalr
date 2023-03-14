@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SignalRRazorCrud00.Models
+namespace SignalRAssignment.Models
 {
     public partial class Course
     {

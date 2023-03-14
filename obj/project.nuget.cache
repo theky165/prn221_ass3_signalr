@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C5RW00zAziKxdyF/v3FAfpZ38K5L27ZcHwLNyPbIaSx8BxCH00+zR6T2D3dIBwSwxiJ9F7GwBre+zAdDMDP51w==",
+  "dgSpecHash": "I9Mvb8VG0kGjBMt9/NkX5KruBrYkiHeF7XF9srmSP4h7+5yqHiYAcMUMpDyhoD+C2EOM6nnBdBsGefwtZJfuKw==",
   "success": true,
-  "projectFilePath": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRRazorCrud00.csproj",
+  "projectFilePath": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRAssignment.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ky.tang\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ky.tang\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

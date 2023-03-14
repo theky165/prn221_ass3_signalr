@@ -1,7 +1,7 @@
-﻿using SignalRRazorCrud00.Models;
+﻿using SignalRAssignment.Models;
 using System.Diagnostics;
 
-namespace SignalRRazorCrud00.Data
+namespace SignalRAssignment.Data
 {
     public static class DbInitializer
     {
