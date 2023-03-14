@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ky.tang\\Downloads\\SignalRazorPageCRUD\\SignalRRazorCrud02\\SignalRRazorCrud00\\SignalRRazorCrud00.csproj": {}
+    "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRRazorCrud00.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ky.tang\\Downloads\\SignalRazorPageCRUD\\SignalRRazorCrud02\\SignalRRazorCrud00\\SignalRRazorCrud00.csproj": {
+    "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRRazorCrud00.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ky.tang\\Downloads\\SignalRazorPageCRUD\\SignalRRazorCrud02\\SignalRRazorCrud00\\SignalRRazorCrud00.csproj",
+        "projectUniqueName": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRRazorCrud00.csproj",
         "projectName": "SignalRRazorCrud00",
-        "projectPath": "C:\\Users\\ky.tang\\Downloads\\SignalRazorPageCRUD\\SignalRRazorCrud02\\SignalRRazorCrud00\\SignalRRazorCrud00.csproj",
+        "projectPath": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRRazorCrud00.csproj",
         "packagesPath": "C:\\Users\\ky.tang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ky.tang\\Downloads\\SignalRazorPageCRUD\\SignalRRazorCrud02\\SignalRRazorCrud00\\obj\\",
+        "outputPath": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ky.tang\\AppData\\Roaming\\NuGet\\NuGet.Config",

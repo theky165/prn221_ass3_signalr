@@ -1,10 +1,4 @@
-﻿using SignalRRazorCrud00.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace SignalRAssignment.Models
+﻿namespace SignalRRazorCrud00.Models
 {
     public partial class Post
     {

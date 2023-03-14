@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using SignalRAssignment.Models;
 using SignalRRazorCrud00.Models;
 
-namespace SignalRAssignment.Pages.Posts
+namespace SignalRRazorCrud00.Pages.Posts
 {
     public class EditModel : PageModel
     {
@@ -36,8 +31,8 @@ namespace SignalRAssignment.Pages.Posts
                 return NotFound();
             }
             Post = post;
-           ViewData["AuthorId"] = new SelectList(_context.AppUser, "UserId", "Email");
-           ViewData["CategoryId"] = new SelectList(_context.PostCategory, "CategoryId", "CategoryId");
+           ViewData["AuthorId"] = new SelectList(_context.AppUser, "UserId", "FullName");
+           ViewData["CategoryId"] = new SelectList(_context.PostCategory, "CategoryId", "CategoryName");
             return Page();
         }
 

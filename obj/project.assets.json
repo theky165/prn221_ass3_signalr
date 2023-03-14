@@ -10022,9 +10022,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRAssignment.csproj",
-      "projectName": "SignalRAssignment",
-      "projectPath": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRAssignment.csproj",
+      "projectUniqueName": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRRazorCrud00.csproj",
+      "projectName": "SignalRRazorCrud00",
+      "projectPath": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRRazorCrud00.csproj",
       "packagesPath": "C:\\Users\\ky.tang\\.nuget\\packages\\",
       "outputPath": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\obj\\",
       "projectStyle": "PackageReference",

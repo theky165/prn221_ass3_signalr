@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using SignalRAssignment.Models;
 
 namespace SignalRRazorCrud00.Models
 {
@@ -31,8 +30,8 @@ namespace SignalRRazorCrud00.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=(local);User ID=sa;Password=Kybe3buoi;Database=SchoolContextDB;Encrypt=False;Trusted_Connection=True;");
+                var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+                optionsBuilder.UseSqlServer(config.GetConnectionString("SchoolContextDBContext"));
             }
         }
 
@@ -104,42 +103,42 @@ namespace SignalRRazorCrud00.Models
             });
 
             modelBuilder.Entity<Course>(entity =>
-                {
-                    entity.ToTable("Course");
+            {
+                entity.ToTable("Course");
 
-                    entity.HasIndex(e => e.DepartmentId, "IX_Course_DepartmentID");
+                entity.HasIndex(e => e.DepartmentId, "IX_Course_DepartmentID");
 
-                    entity.Property(e => e.CourseId)
-                        .ValueGeneratedNever()
-                        .HasColumnName("CourseID");
+                entity.Property(e => e.CourseId)
+                    .ValueGeneratedNever()
+                    .HasColumnName("CourseID");
 
-                    entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
+                entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
 
-                    entity.Property(e => e.Title).HasMaxLength(50);
+                entity.Property(e => e.Title).HasMaxLength(50);
 
-                    entity.HasOne(d => d.Department)
-                        .WithMany(p => p.Courses)
-                        .HasForeignKey(d => d.DepartmentId);
+                entity.HasOne(d => d.Department)
+                    .WithMany(p => p.Courses)
+                    .HasForeignKey(d => d.DepartmentId);
 
-                    entity.HasMany(d => d.Instructors)
-                        .WithMany(p => p.CoursesCourses)
-                        .UsingEntity<Dictionary<string, object>>(
-                            "CourseInstructor",
-                            l => l.HasOne<Instructor>().WithMany().HasForeignKey("InstructorsId"),
-                            r => r.HasOne<Course>().WithMany().HasForeignKey("CoursesCourseId"),
-                            j =>
-                            {
-                                j.HasKey("CoursesCourseId", "InstructorsId");
+                entity.HasMany(d => d.Instructors)
+                    .WithMany(p => p.CoursesCourses)
+                    .UsingEntity<Dictionary<string, object>>(
+                        "CourseInstructor",
+                        l => l.HasOne<Instructor>().WithMany().HasForeignKey("InstructorsId"),
+                        r => r.HasOne<Course>().WithMany().HasForeignKey("CoursesCourseId"),
+                        j =>
+                        {
+                            j.HasKey("CoursesCourseId", "InstructorsId");
 
-                                j.ToTable("CourseInstructor");
+                            j.ToTable("CourseInstructor");
 
-                                j.HasIndex(new[] { "InstructorsId" }, "IX_CourseInstructor_InstructorsID");
+                            j.HasIndex(new[] { "InstructorsId" }, "IX_CourseInstructor_InstructorsID");
 
-                                j.IndexerProperty<int>("CoursesCourseId").HasColumnName("CoursesCourseID");
+                            j.IndexerProperty<int>("CoursesCourseId").HasColumnName("CoursesCourseID");
 
-                                j.IndexerProperty<int>("InstructorsId").HasColumnName("InstructorsID");
-                            });
-                });
+                            j.IndexerProperty<int>("InstructorsId").HasColumnName("InstructorsID");
+                        });
+            });
 
             modelBuilder.Entity<Department>(entity =>
             {

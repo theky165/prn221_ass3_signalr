@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using SignalRAssignment.Models;
 using SignalRRazorCrud00.Models;
 
-namespace SignalRAssignment.Pages.Posts
+namespace SignalRRazorCrud00.Pages.Posts
 {
     public class DetailsModel : PageModel
     {

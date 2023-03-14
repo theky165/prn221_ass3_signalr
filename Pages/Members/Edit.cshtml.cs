@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using SignalRAssignment.Models;
 using SignalRRazorCrud00.Models;
 
-namespace SignalRAssignment.Pages.Members
+namespace SignalRRazorCrud00.Pages.Members
 {
     public class EditModel : PageModel
     {

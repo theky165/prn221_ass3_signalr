@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.SignalR;
-using SignalRAssignment.Models;
+using SignalRRazorCrud00.Models;
 using SignalRRazorCrud00.Hubs;
 
-namespace SignalRAssignment.Pages.Posts
+namespace SignalRRazorCrud00.Pages.Posts
 {
     public class CreateModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace SignalRAssignment.Pages.Posts
 
         public IActionResult OnGet()
         {
-            ViewData["AuthorId"] = new SelectList(_context.AppUser, "UserId", "Email");
+            ViewData["AuthorId"] = new SelectList(_context.AppUser, "UserId", "FullName");
             ViewData["CategoryId"] = new SelectList(_context.PostCategory, "CategoryId", "CategoryName");
             return Page();
         }
