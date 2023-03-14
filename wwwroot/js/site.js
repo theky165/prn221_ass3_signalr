@@ -12,6 +12,10 @@ connection.on("LoadPosts", function () {
     location.href='/Posts'
 });
 
+connection.on("LoadMembers", function () {
+    location.href='/Members'
+});
+
 connection.start().catch(function (err) {
     return console.error(err.toString());
 });

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SignalRAssignment.Models
+﻿namespace SignalRAssignment.Models
 {
     public partial class Course
     {

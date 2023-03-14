@@ -40,7 +40,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
 app.MapHub<SignalRServer>("/signalRServer");
+
 app.MapRazorPages();
 
 app.Run();

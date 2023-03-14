@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.SignalR;
+using SignalRAssignment.Hubs;
 using SignalRAssignment.Models;
 
 namespace SignalRAssignment.Pages.Members
@@ -7,10 +9,12 @@ namespace SignalRAssignment.Pages.Members
     public class CreateModel : PageModel
     {
         private readonly SignalRAssignment.Models.SchoolContextDBContext _context;
+        private readonly IHubContext<SignalRServer> _signalRHub;
 
-        public CreateModel(SignalRAssignment.Models.SchoolContextDBContext context)
+        public CreateModel(SignalRAssignment.Models.SchoolContextDBContext context, IHubContext<SignalRServer> signalRHub)
         {
             _context = context;
+            _signalRHub = signalRHub;
         }
 
         public IActionResult OnGet()
@@ -32,6 +36,7 @@ namespace SignalRAssignment.Pages.Members
 
             _context.AppUser.Add(AppUser);
             await _context.SaveChangesAsync();
+            await _signalRHub.Clients.All.SendAsync("LoadMembers");
 
             return RedirectToPage("./Index");
         }
