@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace SignalRRazorCrud00.Models
+{
+    public enum Grade
+    {
+        A, B, C, D, F
+    }
+    public partial class Enrollment
+    {
+        public int EnrollmentId { get; set; }
+        public int CourseId { get; set; }
+        public int StudentId { get; set; }
+        public int? Grade { get; set; }
+
+        public virtual Course Course { get; set; } = null!;
+        public virtual Student Student { get; set; } = null!;
+    }
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT_University\\Term 8\\PRN221\\SignalRAssignment\\SignalRAssignment.csproj": {}
+    "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRAssignment.csproj": {}
   },
   "projects": {
-    "D:\\FPT_University\\Term 8\\PRN221\\SignalRAssignment\\SignalRAssignment.csproj": {
+    "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRAssignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT_University\\Term 8\\PRN221\\SignalRAssignment\\SignalRAssignment.csproj",
+        "projectUniqueName": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRAssignment.csproj",
         "projectName": "SignalRAssignment",
-        "projectPath": "D:\\FPT_University\\Term 8\\PRN221\\SignalRAssignment\\SignalRAssignment.csproj",
+        "projectPath": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\SignalRAssignment.csproj",
         "packagesPath": "C:\\Users\\ky.tang\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT_University\\Term 8\\PRN221\\SignalRAssignment\\obj\\",
+        "outputPath": "D:\\FPT_University\\Term 8\\PRN221\\prn221_ass3_signalr\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ky.tang\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,23 +40,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.0.14, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.12, )"
             }
