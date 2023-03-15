@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using SignalRAssignment.Hubs;
 using SignalRAssignment.Models;
 
 namespace SignalRAssignment.Pages.Posts
@@ -8,10 +10,12 @@ namespace SignalRAssignment.Pages.Posts
     public class DeleteModel : PageModel
     {
         private readonly SignalRAssignment.Models.SchoolContextDBContext _context;
+        private readonly IHubContext<SignalRServer> _signalRHub;
 
-        public DeleteModel(SignalRAssignment.Models.SchoolContextDBContext context)
+        public DeleteModel(SignalRAssignment.Models.SchoolContextDBContext context, IHubContext<SignalRServer> signalRHub)
         {
             _context = context;
+            _signalRHub = signalRHub;
         }
 
         [BindProperty]
@@ -50,6 +54,7 @@ namespace SignalRAssignment.Pages.Posts
                 Post = post;
                 _context.Post.Remove(Post);
                 await _context.SaveChangesAsync();
+                await _signalRHub.Clients.All.SendAsync("LoadPosts");
             }
 
             return RedirectToPage("./Index");

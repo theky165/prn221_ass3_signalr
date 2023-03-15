@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using SignalRAssignment.Hubs;
 using SignalRAssignment.Models;
 
 namespace SignalRAssignment.Pages.Posts
@@ -9,10 +11,12 @@ namespace SignalRAssignment.Pages.Posts
     public class EditModel : PageModel
     {
         private readonly SignalRAssignment.Models.SchoolContextDBContext _context;
+        private readonly IHubContext<SignalRServer> _signalRHub;
 
-        public EditModel(SignalRAssignment.Models.SchoolContextDBContext context)
+        public EditModel(SignalRAssignment.Models.SchoolContextDBContext context, IHubContext<SignalRServer> signalRHub)
         {
             _context = context;
+            _signalRHub = signalRHub;
         }
 
         [BindProperty]
@@ -50,6 +54,7 @@ namespace SignalRAssignment.Pages.Posts
             try
             {
                 await _context.SaveChangesAsync();
+                await _signalRHub.Clients.All.SendAsync("LoadPosts");
             }
             catch (DbUpdateConcurrencyException)
             {
